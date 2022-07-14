@@ -1,0 +1,83 @@
+.Header{
+position:fixed;
+height:30%;
+width:100%;
+top:0;
+}
+
+.scroll{
+  margin-top:20%;height:200%; 
+}
+.profile{
+  margin-top:30%;
+  
+  width:100%;
+  background-color:#c8e8f5;
+  border-top-left-radius: 50rpx;
+  border-top-right-radius: 50rpx;
+  
+  }
+  .infoBox{
+    display:flex;
+    flex-direction: column;
+    position: absolute;
+     margin-left: 10%;
+     top:12%;
+     align-content: center;
+     justify-content: center;
+     width:60%;
+  }
+.avatar{
+  border-radius: 45%;
+  width:160rpx;
+  height:160rpx;
+  box-shadow: 0 0  50rpx 18rpx #ffffff;
+}
+.nickname{
+  margin-top:20rpx;
+  align-self:left;
+  font-size:40rpx;
+  font-weight:900;
+}
+.text2{
+  font-weight: 550;
+  font-size:30rpx;
+}
+.share
+{width:100%
+
+
+}
+.box1{width:50%;display:flex;justify-content:center;
+  align-items: center;
+border-top: 7rpx solid #790d94;
+  color:grey;
+
+}
+.box2{width:50%;display:flex;justify-content:center;
+ align-items: center;
+ color:grey;
+}
+.time{position: absolute;
+left:12%;
+font-size:40rpx;
+}
+.list-item{
+  width:92%;
+  background-color: white;
+  margin:20rpx 20rpx;
+  padding-bottom:5rpx;
+  border-radius: 20rpx;
+  }
+  .list-box{width:60%;
+  border-radius: 20rpx;
+  margin-left:20% ;
+  }
+  .list2{display: flex;
+    flex-direction: column;
+    align-items: center; 
+    
+  }
+.shoucang{
+  background-color: Azure   ;
+}

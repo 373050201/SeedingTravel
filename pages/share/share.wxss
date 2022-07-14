@@ -1,0 +1,64 @@
+.travel-record{
+  display: flex;
+  padding: 10rpx 10rpx 5rpx;
+  border-bottom-style: groove;
+}
+.cover{
+  width: 200rpx;
+  height: 150rpx;
+  margin-right: 30rpx;
+  border-radius: 30rpx;
+}
+.basic{
+  align-items: center;
+}
+.title{
+  width: 300rpx;
+  /* 超过一行省略 */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.date{
+  color: gray;
+  padding-top:-100rpx;
+  padding-left: 220rpx;
+}
+.title{
+  font-size: large;
+  color: darkslategray ;
+}
+.description{
+  padding-top: 20rpx;
+}
+.add_item{
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.add_image{
+  position:fixed;
+  bottom: 0;
+  width: 100rpx;
+  height: 100rpx;  
+}
+
+.delete_image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 30rpx;
+  margin-top: -100rpx;
+  margin-left: 450rpx;
+}
+.van-swipe-cell__left {
+  display: inline-block;
+  width: 65px;
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+  background-color: rgb(67, 88, 185);
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+}

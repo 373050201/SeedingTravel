@@ -1,0 +1,32 @@
+<view class="cu-card case" :class="isCard?'no-card':''" wx:for="{{diaryList}}" wx:key="title"
+	data-thumb_openid="{{item.openid}}" data-title="{{item.title}}" data-openid="{{item.openid}}" bindtap="godetail">
+	<view class="cu-item shadow">
+		<view class="image">
+			<image src="{{item.cover}}" mode="widthFix"></image>
+			<view class="cu-bar bg-shadeBottom"> <text class="text-cut">{{item.description}}</text></view>
+		</view>
+		<view class="cu-list menu-avatar">
+			<view class="cu-item">
+
+				<view class="cu-avatar round lg" style="background-image:url({{item.avatar_url}});"></view>
+				<view class="content flex-sub">
+					<view class="text-gray text-sm flex justify-between">
+						<view class="text-grey text-xl text-bold">{{item.title}}</view>
+						<view class="text-gray text-sm text-right">{{item.share_time}}</view>
+					</view>
+					<!-- 发布时间,用户点击分享后获取到的时间 -->
+					<view class="text-gray text-sm flex justify-between">
+						{{item.nickname}}
+						<!-- {{item.share_time}} -->
+						<view class="text-gray text-sm">
+							<text class="cuIcon-attentionfill margin-lr-xs">{{item.view_num}}</text>
+							<text class="cuIcon-appreciatefill margin-lr-xs">{{item.thumb_num}}</text>
+							<text class="cuIcon-messagefill margin-lr-xs">{{item.comment_num}}</text>
+						</view>
+					</view>
+				</view>
+			</view>
+
+		</view>
+	</view>
+</view>

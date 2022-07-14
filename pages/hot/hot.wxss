@@ -1,0 +1,78 @@
+/* pages/hot/hot.wxss */
+.swiper{
+  min-height:900rpx;
+  
+}
+
+.grid-item-container {
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-top: 1rpx solid #D9D9D9;
+ 
+}
+
+/*
+  item容器样式
+*/
+
+.grid-item-child {
+ 
+
+  float: left;
+  width: 28%;
+  height: 220rpx;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  border-right: 1rpx solid #D9D9D9;
+  border-bottom: 1rpx solid #D9D9D9;
+  border-radius: 20rpx;
+  overflow: hidden;
+  margin: 30rpx 0rpx ;
+  margin-left:4%;
+
+  box-shadow: 0rpx 0rpx 5rpx 4rpx #8010ef
+}
+
+/*
+  icon样式
+*/
+.text1{color:white;
+  border-radius: 10rpx;
+    margin:10rpx 20rpx;
+    position: absolute;
+    top: 55%;
+    font-size: 25rpx;
+  }
+.icon{
+position:absolute;
+top:0%;
+right:5%;
+color:yellow
+
+}
+.text{ position: absolute;
+ margin:10rpx 20rpx;
+  color: rgb(0,0,0);
+  font-weight:900;
+  font-size: 50rpx;
+ bottom: 40%;
+  
+  
+  background-color: rgba(200,200,200,0.5);
+
+  border-radius: 10rpx;
+ 
+}
+
+/*
+ 文本样式
+*/
+.label {
+  position:absolute;
+  margin-top:10rpx;
+  color: #666;
+  font-size: 14px;
+}

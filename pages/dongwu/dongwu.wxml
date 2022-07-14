@@ -1,0 +1,13 @@
+<!--miniprogram/pages/dongwu/dongwu.wxml-->
+<!-- <button open-type="share" class="button_share">分享</button> -->
+
+<view class="view_main">
+  <image class="image_type" src="{{imgPath}}" mode="aspectFit"></image>
+  <image class="button_type" bind:tap="doClickWork" src="../../resources/images/AIPage/camera.png"></image>
+  <view class="view_items">
+    <view wx:for="{{items}}" wx:key="{{item}}" class="view_item">
+      <text selectable='true' class="text_main" data-url="{{item.baike_info.baike_url}}" bindtap="jumpBaike">名称：{{item.name}}</text>
+      <text selectable='true' class="text_son">相似度：{{item.score}}</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,21 @@
+<!-- 第一部分 旅行记录 -->
+
+<!-- 新建旅行记录 -->
+<view class="add_item">
+  <image src="../../images/笔记本.png" bindtap="gototianjia" class="add_image"></image>
+</view>
+
+
+<van-swipe-cell wx:for="{{diaryList}}" wx:key="title"  bindtap="godetail" data-title="{{item.title}}" left-width="{{ 65 }}">
+  <view slot="left" bindtap="share" data-title="{{item.title}}">分享</view>
+<view class="travel-record">
+  <image class="cover" src="{{item.cover}}" bindtap="godetail" data-title="{{item.title}}"></image>
+  <view class="basic">
+    <view class="title" bindtap="godetail" data-title="{{item.title}}">{{item.title}}</view>
+    <view class="description" bindtap="godetail" data-title="{{item.title}}">{{item.description}}</view>
+    <image data-title="{{item.title}}" src="../../images/垃圾桶.png" bindtap="deleteDairy" class="delete_image"></image>
+    <view class="date">{{item.date}}</view>
+  </view>
+</view>
+</van-swipe-cell>
+<van-dialog id="van-dialog"/>

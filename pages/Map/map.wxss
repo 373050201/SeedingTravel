@@ -1,0 +1,133 @@
+/* pages/Map/map.wxss */
+page {
+  height: 100%;
+}
+.view {
+  width: 100%;
+  height: 100%;
+}
+map {
+  width: 100%;
+  height: 100%;
+  background-color: #f7f7f7;
+}
+.multiFun {
+  height: 600px;
+  width: 100%;
+  background: #fff8f8;
+  position: relative;
+  border-radius: 25rpx;
+}
+.line {
+  width: 100%;
+  height: 1.5px;
+  background: #7e7e7e;
+  position: relative;
+  width: 125rpx;
+  display: block;
+  box-sizing: border-box;
+  left: 310rpx;
+  top: 15rpx;
+  height: 10rpx;
+}
+
+.searchbox {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: row;
+  box-sizing: content-box;
+}
+.search {
+  background: #e2e2e2;
+  align-items: center;
+  width: 90%;
+  height: 80rpx;
+  position: relative;
+  left: 3.5%;
+  top: 25rpx;
+  border-radius: 15rpx;
+  display: flex;
+  flex-direction: row;
+  padding-left: 20rpx;
+}
+.searchinput {
+  box-sizing: content-box;
+}
+
+.searchicon {
+  height: 80rpx;
+  width: 80rpx;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  position: relative;
+}
+
+.AI {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 100%;
+  height: 150rpx;
+  margin-top: 35rpx;
+}
+.typeicon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  margin:25rpx;
+  height: 100rpx;
+}
+.AItext {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 100%;
+  height: 20px;
+}
+.Mytext {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  flex-grow: 1;
+}
+.divideline {
+  display: block;
+  box-sizing: border-box;
+  position: relative;
+  left: 35rpx;
+  top: 43rpx;
+  height: 3rpx;
+  width: 680rpx;
+  background: #e2e2e2;
+}
+.tools {
+  border-radius: 10px;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+  width: 736rpx;
+  height: 84rpx;
+  display: flex;
+  box-sizing: border-box;
+  position: relative;
+  left: -15rpx;
+  top: 71rpx;
+}
+.icon2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  flex-grow: 1;
+}
+.toolicon {
+  height: 70rpx;
+  width: 70rpx;
+  margin: 20rpx;
+}

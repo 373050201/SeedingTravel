@@ -1,0 +1,72 @@
+<!-- 旅行记录布局 用的colorui组件的语法 -->
+<view class="cu-card dynamic " :class="isCard?'no-card':''" wx:for="{{detailList}}" wx:key="destination">
+	<view class="cu-item shadow">
+		<view class="cu-list menu-avatar ">
+			<view class="cu-item">
+				<view class="cu-avatar lg round bg-gradual-blue "><text>{{item.classification}}</text></view>
+				<view class="content flex-sub">
+					<view class="text-purple text-xxl ">{{item.destination}}</view>
+					<view class="text-gray text-sm flex justify-between">
+						{{item.date}}
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="text-content">
+			{{item.content}}
+		</view>
+		<view class="pic">
+			<swiper class="swiper" circular="true">
+				<swiper-item wx:for="{{item.pic}}" wx:key="*this" wx:for-item="pic">
+					<image src="{{pic}}" class="picture" mode="aspectFit"></image>
+				</swiper-item>
+			</swiper>
+		</view>
+	</view>
+</view>
+<!-- 评论区域 （请前端重新帮忙排版装饰！！）-->
+<view class="cu-list menu-avatar comment solids-bottom " wx:for="{{commentList}}" wx:key="*this">
+	<view class="cu-item">
+		<view class="cu-avatar round" style="background-image:url({{item.avatar_url}});"></view>
+		<!--头像-->
+		<view class="content">
+			<view class="text-grey">{{item.nickname}}
+				<!--昵称-->
+			</view>
+			<view class="text-df">
+				<view class="flex">
+					<view class="flex-sub">{{item.content}}
+						<!--评论内容-->
+					</view>
+				</view>
+			</view>
+			<view class=" flex justify-between">
+				<view class="text-gray text-sm">{{item.time}}
+					<!--评论时间-->
+				</view>
+				<view>
+					<text class="cuIcon-deletefill text-gray " bindtap="del_com" data-openid="{{item.openid}}"
+						data-time="{{item.time}}" wx:if="{{userOpenid==item.openid}}"></text>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
+<!-- 底部评论区域 -->
+<view class="standview">
+	<view class="cu-bar foot input" :style="[{bottom:InputBottom+'px'}]">
+		<view class="action">
+			<text class="cuIcon-messagefill text-grey"></text>
+		</view>
+		<input bindinput="getContent" class="solid-bottom" :adjust-position="false" :focus="false" maxlength="300"
+			cursor-spacing="10" placeholder="发表我的评论吧"></input>
+		<view class="action">
+			<text wx:if="{{thumb_state==false}}" class="cuIcon-appreciatefill margin-lr-xs " bindtap="thumb_add"></text>
+			<text wx:if="{{thumb_state==true}}" class="cuIcon-appreciatefill margin-lr-xs text-red "
+				bindtap="thumb_reduce"></text>
+		</view>
+		<button class="cu-btn bg-green shadow" bindtap="comment">发送</button>
+	</view>
+</view>
+<!-- 弹窗组件 -->
+<van-dialog id="van-dialog" />

@@ -1,0 +1,36 @@
+<view class="cu-bar bg-purple" style="padding-top:90rpx">
+		<view class="action" bindtap="return" style="padding-bottom:20rpx">
+			<text class="cuIcon-back text-gray" bindtap="return"></text> 返回
+    </view>
+</view>
+<!--content-->
+
+<view class="cu-bar search bg-white">
+	<image src="../../images/fire1.gif" style="height:60rpx;width:50rpx;margin-bottom:20rpx" />
+	<view class="text-red text-bold">热点城市</view>
+  <view class="search-form round bg-gray">
+    <text class="cuIcon-search "></text>
+      <input type="text" placeholder="搜索" confirm-type="search"></input>
+  	</view>
+</view>
+
+<swiper class="swiper" >
+	<swiper-item  wx:for="{{list}}" wx:key="index"class="swiper-item"   >
+		<view class='grid-item-container' style="display:flex;justify-content:center;">
+			<view style="width:95%">
+				<view  wx:for="{{city}}" wx:for-item="items" wx:for-index="indexs" class='grid-item-child' bindtap="check" data-id="{{indexs}}" wx:if="{{(item<=indexs)&&(indexs<item+9)}}" >	
+						<image src="{{items.pic}}" mode="aspectFill"  >
+							<icon wx:if="{{items.select}}"  class="cuIcon-roundcheckfill icon" />
+							<icon wx:else   class="cuIcon-roundcheck icon" />
+							<view class="text">{{items.name}}</view>
+							<view class="text1">{{items.text}}</view>
+						</image>
+				</view>
+			</view>
+		</view>
+	</swiper-item>
+
+
+</swiper>
+<button class="cu-btn round bg-purple" style="position:absolute; align-self:center;bottom:10%;">搜索热点</button>
+

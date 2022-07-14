@@ -1,0 +1,120 @@
+/**index.wxss**/
+
+page {
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.swiper{
+  height:390rpx;
+}
+.Header {
+  padding-top: 60rpx;
+  min-height:560rpx;
+  background-image: url("https://www.shijuepi.com/uploads/allimg/200918/1-20091Q10420.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-bottom-right-radius: 80rpx;
+  border-bottom-left-radius: 80rpx;
+  box-shadow: 0rpx 1rpx 3rpx 4rpx #969090;
+}
+  
+.search-icon {
+  margin-right: 50rpx;
+
+}
+.box{
+  
+  display: flex;
+  flex:row;
+  
+
+}
+.card-box{background-image: "../../images/bg1.png";
+  display:flex; flex-direction:row; padding: 7px;border-radius: 30rpx; box-shadow: 2rpx 2rpx 5rpx 4rpx #8010ef;
+  margin: 20rpx 30rpx;
+  overflow:hidden;
+  background-image: url("https://img2.baidu.com/it/u=2363669019,420455193&fm=26&fmt=auto");
+
+}
+
+.card-item{display:flex; flex-direction:column;
+  background: rgba(0,0,0,0);
+  flex: 1;
+  align-items: center;
+ 
+ 
+}
+.image{border-radius: 10px; overflow: hidden; box-shadow: 0rpx 2rpx 4rpx 1rpx #ffffff;}
+.text1{
+  margin-top: 10rpx;
+  color: rgb(255,200,200);
+  font-weight:700;
+  font-family:simHei;
+  margin-bottom:10rpx;
+ 
+}
+.text2{
+ 
+  color: rgb(255,200,200);
+  font-weight:700;
+  font-family:simHei;
+  
+ 
+}
+.text4{
+ 
+  color: rgb(200,100,100);
+  font-weight:700;
+  padding-left:15rpx;
+  padding-right:15rpx;
+  margin-top:20rpx;
+  margin-bottom:10rpx;
+  
+ 
+}
+.text3{
+ 
+  color: rgb(0,0,0);
+  font-weight:900;
+  font-family:simHei;
+  margin-left:20rpx;
+  margin-top:15rpx;
+  background-color: rgba(200,200,200,0.5);
+  padding:10rpx;
+  border-radius: 10rpx;
+ 
+}
+.footlist {
+  position: relative;
+  border-top-left-radius: 40rpx;
+  border-top-right-radius: 40rpx;
+  padding-top: 1rpx;
+  
+  width:95%;
+}
+
+
+.foot-left {
+  float: left;
+  width: 50%;
+  min-height:10rpx;
+}
+
+.foot-right {
+ 
+  float:right;
+  width: 50%;
+ 
+}
+.list-item{
+width:92%;
+background-color: white;
+margin:20rpx 20rpx;
+padding-bottom:5rpx;
+border-radius: 20rpx;
+}
+.list-box{background-color: aqua;
+border-top-left-radius: 20rpx;border-top-right-radius: 20rpx;
+}

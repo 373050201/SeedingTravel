@@ -1,0 +1,14 @@
+page {
+  background: #f0ede2;
+}
+.add_item{
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.add_image{
+  position:fixed;
+  bottom: 0;
+  width: 100rpx;
+  height: 100rpx;  
+}

@@ -1,0 +1,12 @@
+/* pages/baike/baike.wxss */
+.view_text{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:15px;
+    font-weight:bold;
+    color:rgb(108, 109, 124); 
+    font-family:"楷体";
+    width: 100%;
+    height: 100%;
+}

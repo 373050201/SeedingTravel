@@ -1,0 +1,10 @@
+<!--pages/baike/baike.wxml-->
+<view wx:if="{{condition}}">
+    <image src="/resources/images/mapPage/404.png"></image>
+    <text class="view_text">{{url}}</text>
+</view>
+<view wx:if="{{!condition}}">
+    <web-view src="{{baike_url}}"></web-view>
+</view>
+
+

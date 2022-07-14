@@ -1,0 +1,27 @@
+<!--pages/newpage/newpage.wxml-->
+<van-field
+    label="目的地名称"
+    placeholder="请输入目的地"
+    bind:change="getDestination"
+    left-icon="location-o"
+  /> 
+  <van-cell  icon= "smile-o" title="所属分类" is-link value="{{ value2 }}" bindtap="ontap" />
+  <van-action-sheet
+  show="{{ show }}"
+  actions="{{ actions }}"
+  bind:close="onClose"
+  bind:select="getClassification"
+/>
+<van-cell title="选择前往日期" value="{{ date }}" bind:click="onDisplay" bind:change="getDate" />
+<van-calendar show="{{ show2 }}"   min-date="{{ minDate }}" max-date="{{ maxDate }}" bind:close="onClose2" bind:confirm="onConfirm" />
+<van-field
+    label="所感所想"
+    value="{{ value }}"
+    placeholder="请输入评价和感想"
+    bind:change="getContent"
+    left-icon="edit"
+    type="textarea"
+    autosize
+  />
+<button bindtap="getPhoto">添加图片</button>
+<button bindtap="addDetail">加入日记本中</button>

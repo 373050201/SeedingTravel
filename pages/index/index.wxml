@@ -1,0 +1,102 @@
+<view class="bg-gray">
+<view class="Header" >
+  <view class="box">
+    <view class="cu-bar search" >
+      <image src="../../images/location1.png" style="width: 62rpx; height: 58rpx; margin:0 20rpx;"/>
+      <view class="search-form round">
+        <text class="cuIcon-search"></text>
+        <input type="text" placeholder="搜索" confirm-type="search"></input>
+      </view>
+    </view>
+  </view>
+
+  <view>
+    <swiper  class="swiper {{DotStyle?'square-dot':'round-dot'}}"  indicator-dots="true" x interval="5000" duration="500"indicator-color="#8799a3" autoplay
+    indicator-active-color="#0081ff" display-multiple-items='1' circular previous-margin='60px' next-margin='60px' bindchange='change' current='{{current}}' >
+      <swiper-item class="swiperitem" wx:for="{{temppics}}"  wx:key="{{index}}">
+      <view style="margin:20rpx">
+        <image class="image" src="{{item}}" mode="aspectFill" data-index='{{index}}' animation="{{index == current?animationData:animationData2}}"/>
+      </view>
+          <!--后端获得图片大小从新设置-->   
+       
+      </swiper-item>
+  </swiper>
+  </view>
+
+</view>
+
+<!--选项卡-->
+<view class="card-box">
+
+  <view class="card-item" bindtap="jumpToHot"> 
+  <image src="../../images/remen.png" style="height:160rpx;width:160rpx" bindtap="jumpToHot"></image>
+  <view class="text1" >热门地区</view>
+  </view>
+  
+  <view class="card-item" bindtap="jumpToMap"> 
+  <image src="../../images/luxian.png" style="height:160rpx;width:160rpx"></image>
+  <view class="text1" >实用工具</view>
+  </view>
+
+  <view class="card-item" bindtap="jumpToCM"> 
+  <image src="../../images/shequ.png" style="height:160rpx;width:160rpx"></image>
+  <view class="text1">社区</view>
+  </view>
+
+ 
+</view>
+
+<!--卡牌-->
+<view style="display:flex;align-items: center;flex-direction:column;">
+  
+  
+  <view class='footlist bg-black'>
+    <view style="padding: 10px;display: flex;justify-content: space-between;;height:50rpx;">
+    <view class="text2" style="color:red"> 热门    </view>
+    <view style="color: white; width: 98rpx; height: 35rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx"class="text2" bindtap="jumpToMore">更多 ></view>
+  
+  </view>
+  <view>
+    <view class="foot-left" > 
+      <view wx:for="{{diaryList}}" class="list-item" wx:key="title"
+	data-thumb_openid="{{item.openid}}" data-title="{{item.title}}" bindtap="godetail">
+        <image class="list-box" src="{{item.cover}}" mode="scaleToFill">
+          <view class="text3" style="position:absolute; top: 0;">{{item.title}}</view>
+          <view  style="position:absolute;bottom:0; display:flex; justify-content:right;flex-direction:column;">
+            <image wx:if="{{item.liked}}" style="margin-left:15rpx;height:50rpx;width:50rpx;" src="../../images/like2.png"/>
+            <image wx:else style="margin-left: 15rpx; height: 53rpx; width: 57rpx; position: relative; left: 3rpx; top: 6rpx; display: block; box-sizing: border-box" src="../../images/like1.png"/>
+            <view class="text2"style="color:red;margin:6rpx 17rpx;background-color: rgba(255,255,255,0.6);border-radius: 10rpx; padding:5rpx;">{{item.like}}</view>
+           </view>
+        </image>
+        <view style="display:flex;align-items:center;background-color:rgba(0,0,0,0)">
+          <image style="margin-left:10rpx;height:60rpx;width:60rpx;border-radius:20rpx;" src="{{item.avatar_url}}"></image>
+          <view style="margin-left:20rpx">{{item.nickname}}</view>
+        </view>
+        <view class="text4">{{item.description}}</view>
+      </view>
+      
+    </view>
+    <view class="foot-right">
+      <view wx:for="{{cardsR}}" class="list-item">
+        <image class="list-box" src="{{item.image}}"mode="widthFix"  >
+          <view class="text3" style="position:absolute; top: 0;">{{item.title}}</view>
+          <view  style="position:absolute;bottom:0; display:flex; justify-content:right;flex-direction:column;">
+           
+           </view>
+        </image>
+        
+        <view style="display:flex;align-items:center;background-color:rgba(0,0,0,0)">
+          <image style="margin-left:10rpx;height:60rpx;width:60rpx;border-radius:20rpx;" src="{{item.avatar}}"></image>
+          <view style="margin-left:20rpx">{{item.name}}</view>
+        </view>
+        <view class="text4" >{{item.brief}}</view>
+      </view>
+      
+    </view>
+  </view>
+</view>
+
+</view>
+
+
+</view>

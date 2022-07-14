@@ -1,0 +1,38 @@
+<!-- 新建旅行记录 -->
+<view class="add_item">
+  <image src="../../images/添加.png" bindtap="gototianjia" class="add_image"></image>
+</view>
+<!-- 旅行记录布局 用的colorui组件的语法 -->
+<view class="cu-card dynamic" :class="isCard?'no-card':''" wx:for="{{detailList}}" wx:key="destination">
+	<view class="cu-item shadow">
+		<view class="cu-list menu-avatar">
+			<view class="cu-item">
+				<view class="cu-avatar lg round bg-gradual-blue "><text>{{item.classification}}</text></view>
+				<view class="content flex-sub">
+					<view class="text-purple text-xxl ">{{item.destination}}</view>
+					<view class="text-gray text-sm flex justify-between">
+						{{item.date}}
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="text-content">
+			{{item.content}}
+		</view>
+    <view class="pic">
+    <swiper class="swiper" circular="true">
+      <swiper-item  wx:for="{{item.pic}}" wx:key="*this" wx:for-item="pic">
+        <image src="{{pic}}" class="picture" mode="widthFix"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+		<view class="text-gray text-sm text-right padding">
+			<text class="cuIcon-attentionfill margin-lr-xs"></text> 10
+			<text class="cuIcon-appreciatefill margin-lr-xs"></text> 20
+			<text class="cuIcon-messagefill margin-lr-xs"></text> 30
+			<button class="cuIcon-deletefill margin-lr-xs" bindtap="deleteDetail" 
+			data-title="{{item.title}}" data-destination="{{item.destination}}"></button> 
+		</view>
+    </view>
+</view>
+<van-dialog id="van-dialog" />
